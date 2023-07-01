@@ -1,4 +1,4 @@
-local ScreenGui = Instance.new("ScreenGui")
+vlocal ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -19,7 +19,7 @@ TextButton_2.Text = "Get Link Discord"
 TextButton_2.TextColor3 = Color3.new(0, 0, 0)
 TextButton_2.TextSize = 14
 TextButton_2.MouseButton1Click:Connect(function()
-setclipboard("https://discord.gg/jYM9cjPWVq")
+setclipboard("https://discord.gg/E6fBkTDXjC")
 end)
  
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
