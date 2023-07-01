@@ -1,4 +1,10 @@
-vlocal ScreenGui = Instance.new("ScreenGui")
+game.StarterGui:SetCore("SendNotification", {
+                            Title = "Loading..", 
+                            Text = "Made By Reiji" ,
+                            Icon = "rbxassetid://13877859492",
+                            Duration = 10
+                        })
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
