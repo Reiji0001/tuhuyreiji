@@ -8,7 +8,7 @@
         Duration = 5;
     })
 local allowedUsers = {
-    ["anhtthuc03"] = true,
+    [""] = true,
     ["dthinh3010"] = true
 }
 local currentUserName = game.Players.LocalPlayer.Name
