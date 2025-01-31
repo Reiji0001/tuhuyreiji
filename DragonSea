@@ -1,26 +1,46 @@
-local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+print('VN SCRIPT LOADED!')
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local win = Flux:Window("Dragon Sea", "Made by Reiji ", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
-local tab = win:Tab("Main", "http://www.roblox.com/asset/?id=6023426915")
-tab:Label("VietNam on Top")
-tab:Button("Buff Health (Use Golden)", "Stop at 100k - 300k Hp", function()
-Flux:Notification("Bufffffffffffff!", "Alright")
-_G.ConCac = true
+local Window = Fluent:CreateWindow({
+    Title = "Hack" .. Fluent.Version,
+    SubTitle = "[ 1.0 ]",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.RightAlt
+})
 
-if _G.ConCac then
-repeat wait(0.1)
-game:GetService("Players").LocalPlayer.Backpack.Golden.Transform.Fire:FireServer(game:GetService("Players").LocalPlayer)
-until _G.ConCac == false
-end
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+}
+
+local Dropdown1 = Tabs.Main:AddDropdown("SelectVukhi 1", {
+    Title = "SelectVukhi 1",
+    Values = {"None","Knife","Teddy","M4A1","Railgun No Damage","Red_Lightsaber","Blue_Lightsaber","Toy plane","Tommy","Spike Bat","Boombox<3","Cloud","Cleave","Speed 200+"},
+    Multi = false,
+    Default = 1,        
+})
+
+Dropdown1:OnChanged(function(Value)
+    if Value == "None" then
+    else
+local args = {
+    [1] = {
+        ["Name"] = "none",
+        ["Type"] = "none"
+    },
+    [2] = {
+        ["Quantity"] = 10,
+        ["Name"] = Value
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+    end
 end)
 
-local tab = win:Tab("Misc", "http://www.roblox.com/asset/?id=6023426915")
 
-tab:Button("Get Link Discord", function()
-setclipboard("https://discord.gg/jYM9cjPWVq")
-end)
-
-tab:Button("FlyGui", "Reiji So Cool", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
-end)
-
+print('VN SCRIPT PASS')
