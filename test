@@ -1,12 +1,3 @@
-            local sound = Instance.new("Sound")
-            sound.SoundId = "rbxassetid://413861777"
-            sound.Parent = game:GetService("SoundService")
-            sound:Play()
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Script Load!";
-        Text = "Từ Từ Mà Trải Nghiệm <3";
-        Duration = 5;
-    })
 local allowedUsers = {
     [""] = true,
     ["dthinh3010"] = true
