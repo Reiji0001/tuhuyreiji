@@ -13,6 +13,8 @@ if not allowedUsers[currentUserName] then
     return
 end
     local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/VNT-UNIVERSAL/MyCode/main/UILib"))()
+
+
     local w1 = library:Window("VNT Script Gun - Reiji ")
     w1:Button(
         "Tommy",
@@ -28,6 +30,8 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+
+
 end)
     w1:Button(
         "Railgun No Damage",
@@ -43,6 +47,8 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+
+
 end)
     w1:Button(
         "M4A1",
@@ -58,7 +64,25 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+
+
 end)
+    w1:Button(
+        "Cloud",
+        function()
+local args = {
+    [1] = {
+        ["Name"] = "none",
+        ["Type"] = "none"
+    },
+    [2] = {
+        ["Quantity"] = 10,
+        ["Name"] = "Cloud"
+    }
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+end)
+
     w1:Label("Made By Reiji")
 w1:Button("Đóng Menu", function()
     for i, v in pairs(game.CoreGui:GetChildren()) do
@@ -67,3 +91,11 @@ w1:Button("Đóng Menu", function()
         end
     end
 end)
+if not allowedUsers[currentUserName] then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Script Load!";
+        Text = "Từ Từ Mà Trải Nghiệm <3";
+        Duration = 5;
+    })
+    return
+end
