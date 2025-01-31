@@ -1,0 +1,22 @@
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Script Load!";
+        Text = "Từ Từ Mà Trải Nghiệm <3";
+        Duration = 5;
+    })
+local allowedUsers = {
+    ["anhtthuc03"] = true,
+    ["dthinh3010"] = true
+}
+local currentUserName = game.Players.LocalPlayer.Name
+if not allowedUsers[currentUserName] then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "?";
+        Text = "Bạn không có quyền sử dụng script này.";
+        Duration = 5;
+    })
+    return
+end
