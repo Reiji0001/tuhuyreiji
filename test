@@ -1,13 +1,4 @@
-local allowedUsers = {
-    [""] = true,
-    ["dthinh3010"] = true
+return {
+    ["dthinh3010"] = true,
+    [""] = true
 }
-local currentUserName = game.Players.LocalPlayer.Name
-if not allowedUsers[currentUserName] then
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "?";
-        Text = "Bạn không có quyền sử dụng script này.";
-        Duration = 5;
-    })
-    return
-end
