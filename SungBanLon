@@ -1,9 +1,17 @@
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Script Load!";
+        Text = "Từ Từ Mà Trải Nghiệm <3";
+        Duration = 5;
+    })
 local allowedUsers = {
     ["anhtthuc03"] = true,
     ["dthinh3010"] = true
 }
 local currentUserName = game.Players.LocalPlayer.Name
-
 if not allowedUsers[currentUserName] then
     game.StarterGui:SetCore("SendNotification", {
         Title = "?";
@@ -30,7 +38,10 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
-
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
 
 end)
     w1:Button(
@@ -47,7 +58,10 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
-
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
 
 end)
     w1:Button(
@@ -64,7 +78,10 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
-
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
 
 end)
     w1:Button(
@@ -81,6 +98,11 @@ local args = {
     }
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Inventory"):FireServer(unpack(args))
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxassetid://413861777"
+            sound.Parent = game:GetService("SoundService")
+            sound:Play()
+
 end)
 
     w1:Label("Made By Reiji")
@@ -91,11 +113,3 @@ w1:Button("Đóng Menu", function()
         end
     end
 end)
-if not allowedUsers[currentUserName] then
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Script Load!";
-        Text = "Từ Từ Mà Trải Nghiệm <3";
-        Duration = 5;
-    })
-    return
-end
