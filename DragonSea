@@ -1,3 +1,17 @@
+local allowedUsers = {
+    ["dthinh3010"] = true,
+    ["QuayGames1925"] = true
+}
+local currentUserName = game.Players.LocalPlayer.Name
+
+if not allowedUsers[currentUserName] then
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "?";
+        Text = "Bạn không có quyền sử dụng script này.";
+        Duration = 5;
+    })
+    return
+end
 print('VN SCRIPT LOADED!')
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
