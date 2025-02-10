@@ -22,8 +22,8 @@ if not success or type(allowedUsers) ~= "table" then
     })
     return
 end
-alPlayer.Name
 
+-- Kiểm tra user có trong danh sách không
 if not allowedUsers[currentUserName] then
     game.StarterGui:SetCore("SendNotification", {
         Title = "?";
@@ -31,7 +31,9 @@ if not allowedUsers[currentUserName] then
         Duration = 5;
     })
     return
-end-
+end
+
+print("Bạn có quyền sử dụng script!")
     local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/VNT-UNIVERSAL/MyCode/main/UILib"))()
     local w1 = library:Window("VNT Script PVP - Reiji ")
     w1:Toggle(
